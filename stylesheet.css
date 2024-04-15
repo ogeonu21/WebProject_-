@@ -9,7 +9,6 @@ header{
     height : 10%;
 }
 nav {
-    width : 10%;
     float : left;
     overflow : hidden;
 }
@@ -39,4 +38,7 @@ footer{
 .section_item{
     float : left;
     
+}
+#top_1{
+    height : 
 }
