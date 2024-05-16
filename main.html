@@ -9,10 +9,16 @@
         *{
             margin : 0 auto; padding : 0;
         }
+        body{
+            background-color :rgba(245, 245, 245, 0.3);
+        }
         .header{
             width : auto;
-            height : 100px;
+            height : 70px;
             background-color : grey;
+        }
+        .header_Logo{
+            float : left;
         }
         .container {
             width: 1080px;
@@ -20,30 +26,30 @@
             margin: 0 auto;
             margin-bottom: 8px;
         }
-        ul.list {
+        ul.header_Nav {
             float: left;
             padding-top: 8px;
             padding-bottom: 8px;
             padding-left: 0;
             background: white;
         }
-        ul.list>li {
+        ul.header_Nav>li {
             list-style-type: none;
             float: left;
             padding-left : 10px;
             padding-right : 10px;
         }
-        ul.list>li:first-child {
+        ul.header_Nav>li:first-child {
             padding-left: 0;
         }
-        ul.login {
+        ul.header_Login {
             float: right;
             padding-top: 8px;
             padding-bottom: 8px;
             padding-left: 0;
             background: white;
         }
-        ul.login>li {
+        ul.header_Login>li {
             list-style-type: none;
         }
 
@@ -64,7 +70,7 @@
         #top{
             width : 100%;
             height : 1000px;
-            background-color : whitesmoke;
+
             text-align: center;
             position : relative;
         }
@@ -102,17 +108,16 @@
 </head>
 
 <body>
-    <div class = "header">
-    <div class="container"><h1>Logo</h1></div>
+    <div class = "header"><h1 class = "header_Logo">Logo</h1><ul class="header_Nav">
+        <li><a href = "#top">맛집</a></li>
+        <li><a href = "middle">정책</a></li>
+        <li><a href = "#bottom">청소</a></li>
+    </ul>
+    <ul class="header_Login">
+        <li>로그인</li>
+    </ul></div>
     <div class="container">
-        <ul class="list">
-            <li><a href = "#top">맛 집</a></li>
-            <li><a href = "middle">정 책</a></li>
-            <li><a href = "#bottom">청 소</a></li>
-        </ul>
-        <ul class="login">
-            <li>로 그 인</li>
-        </ul>
+        
     </div>
 
     <div class = "nav">
@@ -122,7 +127,7 @@
     <div class = "section">
         <div id = "top">
         <br><h1>맛집</h1>
-        <input type="button" value= "더 보 기" style= "float: right;"><br>
+        <div>
         <div class="card">
             <img src="https://via.placeholder.com/300" alt="맛집1">
             <h3>정담순댓국</h3>
@@ -189,6 +194,8 @@
             <input type="button" value= "추천">
             <input type="button" value= "비추천">
         </div>
+        </div>
+        <input type="button" value= "더 보 기" style= "float: right;"><br>
         </div>
 
         <div id = "middle"></div>
