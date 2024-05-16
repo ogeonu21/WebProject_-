@@ -12,8 +12,41 @@
         .header{
             width : auto;
             height : 100px;
-            background-color : gray;
+            background-color : grey;
         }
+        .container {
+            width: 1080px;
+            overflow: hidden;
+            margin: 0 auto;
+            margin-bottom: 8px;
+        }
+        ul.list {
+            float: left;
+            padding-top: 8px;
+            padding-bottom: 8px;
+            padding-left: 0;
+            background: white;
+        }
+        ul.list>li {
+            list-style-type: none;
+            float: left;
+            padding-left : 10px;
+            padding-right : 10px;
+        }
+        ul.list>li:first-child {
+            padding-left: 0;
+        }
+        ul.login {
+            float: right;
+            padding-top: 8px;
+            padding-bottom: 8px;
+            padding-left: 0;
+            background: white;
+        }
+        ul.login>li {
+            list-style-type: none;
+        }
+
         .nav{
             width : auto;
             height : 500px;
@@ -21,6 +54,7 @@
         }
         .section{
             width : 80%;
+            position: relative;
         }
         .footer{
             width : auto;
@@ -29,9 +63,31 @@
         }
         #top{
             width : 100%;
-            height : 600px;
-            background-color : red;
+            height : 1000px;
+            background-color : whitesmoke;
+            text-align: center;
+            position : relative;
         }
+        .card {
+            width: 300px;
+            height : 350px;
+            margin: 20px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            display: inline-block;
+            vertical-align: top;
+        }
+        .card img {
+            width: 60%;
+            height: auto;
+            border-radius: 5px;
+        }
+        .card p {
+            margin-top: 10px;
+            text-align: left;
+        }
+
         #middle{
             width : 100%;
             height : 600px;
@@ -43,17 +99,98 @@
             background-color : green;
         }
     </style>
-
 </head>
+
 <body>
     <div class = "header">
-
+    <div class="container"><h1>Logo</h1></div>
+    <div class="container">
+        <ul class="list">
+            <li><a href = "#top">맛 집</a></li>
+            <li><a href = "middle">정 책</a></li>
+            <li><a href = "#bottom">청 소</a></li>
+        </ul>
+        <ul class="login">
+            <li>로 그 인</li>
+        </ul>
     </div>
+
     <div class = "nav">
 
     </div>
+
     <div class = "section">
-        <div id = "top"></div>
+        <div id = "top">
+        <br><h1>맛집</h1>
+        <input type="button" value= "더 보 기" style= "float: right;"><br>
+        <div class="card">
+            <img src="https://via.placeholder.com/300" alt="맛집1">
+            <h3>정담순댓국</h3>
+            <p>평점 : <br>
+                식당종류 : <br>
+                대표메뉴 : <br>
+                위치: <br>
+            </p>
+            <input type="button" value= "추천">
+            <input type="button" value= "비추천">
+        </div>
+        <div class="card">
+            <img src="https://via.placeholder.com/300" alt="맛집2">
+            <h3></h3>
+            <p>평점 : <br>
+                식당종류 : <br>
+                대표메뉴 : <br>
+                위치: <br>
+            </p>
+            <input type="button" value= "추천">
+            <input type="button" value= "비추천">
+        </div>
+        <div class="card">
+            <img src="https://via.placeholder.com/300" alt="맛집3">
+            <h3></h3>
+            <p>평점 : <br>
+                식당종류 : <br>
+                대표메뉴 : <br>
+                위치: <br>
+            </p>
+            <input type="button" value= "추천">
+            <input type="button" value= "비추천">
+        </div>
+        <div class="card">
+            <img src="https://via.placeholder.com/300" alt="맛집3">
+            <h3></h3>
+            <p>평점 : <br>
+                식당종류 : <br>
+                대표메뉴 : <br>
+                위치: <br>
+            </p>
+            <input type="button" value= "추천">
+            <input type="button" value= "비추천">
+        </div>
+        <div class="card">
+            <img src="https://via.placeholder.com/300" alt="맛집3">
+            <h3></h3>
+            <p>평점 : <br>
+                식당종류 : <br>
+                대표메뉴 : <br>
+                위치: <br>
+            </p>
+            <input type="button" value= "추천">
+            <input type="button" value= "비추천">
+        </div>
+        <div class="card">
+            <img src="https://via.placeholder.com/300" alt="맛집3">
+            <h3></h3>
+            <p>평점 : <br>
+                식당종류 : <br>
+                대표메뉴 : <br>
+                위치: <br>
+            </p>
+            <input type="button" value= "추천">
+            <input type="button" value= "비추천">
+        </div>
+        </div>
+
         <div id = "middle"></div>
         <div id = "bottom"></div>
     </div>
