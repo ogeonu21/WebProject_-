@@ -1,44 +1,35 @@
-* {
-    margin : 0; padding : 0;
+
+
+.rating-container {
+    display: flex;
+    gap: 20px;
 }
-html{
-    width : 100%; height : 100%;
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
-header{
-    width : 100%;
-    height : 10%;
+
+.like-btn {
+    background-color: #4CAF50;
+    color: white;
 }
-nav {
-    float : left;
-    overflow : hidden;
+
+.dislike-btn {
+    background-color: #f44336;
+    color: white;
 }
-nav>form>legend>fieldset>table>tbody>tr>td{
-    text-align: center;
+
+button:hover {
+    opacity: 0.8;
 }
-section{
-    overflow : hidden;
-    margin : 0 auto;
-    width : 70%;
-    height : 70%;
-}
-aside{
-    margin : 0 auto;
-    height : 10%;
-    width : 70%;
-}
-footer{
-    margin : 0 auto;
-    width : 100%;
-    height : 200px;
-    background-color : rgb(204, 204, 204);
-}
-.text_center{
-    text-align: center;
-}
-.section_item{
-    float : left;
-    
-}
-#top_1{
-    height : 
+
+button:active {
+    transform: scale(0.98);
 }
