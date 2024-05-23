@@ -4,11 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>자취 모여라</title>
-
+    <link rel="stylesheet" href="styles.css">
     <style>
         *{
             margin : 0 auto; padding : 0;
         }
+        a{
+            text-decoration-line : none;
+        }
+        a:link{color : black;}
+        a:visited{color : black;}
         body{
             background-color :rgba(245, 245, 245, 0.3);
             position : relative;
@@ -24,7 +29,7 @@
             top : 50%;
             bottom : 50%;
             padding : 10px;
-            padding-left : 100px;
+            padding-left : 50px;
         }
         .container {
             width: 1080px;
@@ -36,7 +41,7 @@
             float: left;
             padding-top: 8px;
             padding-bottom: 8px;
-            padding-left: 0;
+            padding-left: 10;
         }
         ul.header_Nav>li {
             list-style-type: none;
@@ -47,16 +52,7 @@
         ul.header_Nav>li:first-child {
             padding-left: 200px;
         }
-        ul.header_Login {
-            float: right;
-            padding-top: 8px;
-            padding-bottom: 8px;
-            padding-left: 0;
-            background: white;
-        }
-        ul.header_Login>li {
-            list-style-type: none;
-        }
+        
 
         .nav{
             width : auto;
@@ -94,7 +90,7 @@
             height: 50%;
             border-radius: 5px;
         }
-        .card p {
+        .card table {
             margin-top: 10px;
             text-align: left;
         }
@@ -168,9 +164,7 @@
         <li><a href = "#middle">정책</a></li>
         <li><a href = "#bottom">청소</a></li>
     </ul>
-    <ul class="header_Login">
-        <li>로그인</li>
-    </ul></div>
+    </div>
     
     <div>
         <a href = "#home"></a>
@@ -238,17 +232,23 @@
                 대표메뉴 : 얼큰순대국<br>
                 위치: <a href = "https://map.naver.com/p/search/%EC%A0%95%EB%8B%B4%EC%88%9C%EB%8C%80%EA%B5%AD/place/1566903458?c=15.00,0,0,0,dh&placePath=/home">경기 수원시 장안구 창훈로60번길 24 1층</a><br>
             </p>
-            <input type="button" value= "추천">
-            <input type="button" value= "비추천">
+            <div class="rating-container">
+                <button id="likeBtn" class="like-btn">👍 <span id="likeCount">0</span></button>
+                <button id="dislikeBtn" class="dislike-btn">👎 <span id="dislikeCount">0</span></button>
+            </div>
+        
+            <script src="script.js"></script>
         </div>
         <div class="card">
             <img src="guksu.jpg" width = "300" height = "300" alt="맛집2">
             <h3>국수집</h3>
-            <p>평점 : 4.43<br>
-                식당종류 : 국수<br>
-                대표메뉴 : 잔치국수, 칼국수<br>
-                위치: <a href = "https://map.naver.com/p/search/%EA%B5%AD%EC%88%98/place/969291944?c=15.00,0,0,0,dh&placePath=%3Fentry%253Dbmp">경기 수원시 장안구 창훈로66번길 16-14 신라족발</a><br>
-            </p>
+            <table>
+                <tr><th>평점</th><td>4.43</td></tr>
+                <tr><th>식당종류</th><td>국수</td></tr>
+                <tr><th>대표메뉴</th><td>잔치국수, 칼국수</td></tr>
+                <tr><th>위치</th><td><a href = "https://map.naver.com/p/search/%EA%B5%AD%EC%88%98/place/969291944?c=15.00,0,0,0,dh&placePath=%3Fentry%253Dbmp">경기 수원시 장안구 창훈로66번길 16-14 신라족발</a></td></tr>
+            </table>
+            
             <input type="button" value= "추천">
             <input type="button" value= "비추천">
         </div>
