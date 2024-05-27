@@ -74,6 +74,7 @@
 
             text-align: center;
             position : relative;
+            clear : both;
         }
         .card {
             width: 300px;
@@ -97,39 +98,42 @@
         #middle {
             width: 100%;
             height: auto;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
             gap: 20px;
+            clear : both;
         }
-
-        #middle h1,
-        #middle h2,
-        #middle h3 {
+         #middle h1,
+         #middle h2,
+         #middle h3 {
             text-align: center;
-        }
+         }
 
+        .container{
+                display:flex;
+                flex-direction: row;
+        }
         .box {
             border-width: medium;
             border-style: dashed;
             border-color: black;
             border-radius: 10px;
             width: 80%; 
+            height: 100px;
+            margin: 10px;
             padding: 20px;
-            box-sizing: border-box;
-            display: inline-block;
         }
 
 
         input[type="button"] {
             margin-top: 20px;
             align-self: flex-end;
+            float : right;
         }
      
         #bottom{
             width : 100%;
             height : auto;
             background-color : green;
+            clear : both;
         }
 
         .slider {
@@ -315,25 +319,28 @@
             <input type="button" value= "비추천">
         </div>
         </div>
-        <input type="button" value= "더 보 기" style= "float: right;"><br>
-        </div>
+        <input type="button" value= "더 보 기" style= "float: right;"><br><br>
+        </div><br>
 
         <div id="middle">
             <h1>정책</h1>
             <div><h3>자취하는 청년을 위한 주거지원 정책들</h3></div>
-        <div class="box">
-            <h2>청년월세 특별지원</h2>
-            <h4>청년층 주거비 부담을 낮추고자 국토 교통부에서 월 최대 20만원씩 12개월분 월세를 지원하는 '청년월세 특별지원'을 실시</h4>
-        </div>
-        <div class="box">
-            <h2>청년 전월세보증금 대출</h2>
-            <h4>중소기업에 취업한 청년들에게 낮은 금리로 전월세 보증금 대출을 지원하는 정책</h4>
-        </div>
-        <div class="box">
-            <h2>행복 주택</h2>
-            <h4>청년들의 주거안정을 위한 공공 임대 주택</h4>
-        </div>
-        <input type="button" value="더 보 기">
+
+            <div class="container">
+                <div class="box">
+                    <h2>청년월세 특별지원</h2>
+                    <h4>청년층 주거비 부담을 낮추고자 국토 교통부에서 월 최대 20만원씩 12개월분 월세를 지원하는 '청년월세 특별지원'을 실시</h4>
+                </div>
+                <div class="box">
+                    <h2>청년 전월세보증금 대출</h2>
+                    <h4>중소기업에 취업한 청년들에게 낮은 금리로 전월세 보증금 대출을 지원하는 정책</h4>
+                </div>
+                <div class="box">
+                    <h2>행복 주택</h2>
+                    <h4>청년들의 주거안정을 위한 공공 임대 주택</h4>
+                </div>
+             </div>
+        <input type="button" value= "더 보 기" style= "float : right;"><br>
     </div>
         <div id = "bottom"></div>
     </div>
