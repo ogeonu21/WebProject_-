@@ -13,6 +13,7 @@
             text-decoration-line : none;
         }
         a:link{color : black;}
+        .card a:hover{color : rgb(103, 103, 252);}
         a:visited{color : black;}
         body{
             background-color :rgba(245, 245, 245, 0.3);
@@ -249,77 +250,104 @@
         <div class="card">
             <img src="jungdam.jpg" width = "300" height = "300" alt="맛집1">
             <h3>정담순대국</h3>
-            <p>평점 : 4.51<br>
-                식당종류 : 순대, 순댓국<br>
-                대표메뉴 : 얼큰순대국<br>
-                위치: <a href = "https://map.naver.com/p/search/%EC%A0%95%EB%8B%B4%EC%88%9C%EB%8C%80%EA%B5%AD/place/1566903458?c=15.00,0,0,0,dh&placePath=/home">경기 수원시 장안구 창훈로60번길 24 1층</a><br>
-            </p>
-            <div class="rating-container">
-                <button id="likeBtn" class="like-btn">👍 <span id="likeCount">0</span></button>
-                <button id="dislikeBtn" class="dislike-btn">👎 <span id="dislikeCount">0</span></button>
-            </div>
-        
-            <script src="script.js"></script>
+            <table>
+                <tr><th>평점</th><td>&nbsp;4.51</td></tr>
+                <tr><th>식당종류</th><td>&nbsp;순대, 순댓국</td></tr>
+                <tr><th>대표메뉴</th><td>&nbsp;얼큰순대국</td></tr>
+                <tr><th>위치</th><td><a href = "https://map.naver.com/p/search/%EC%A0%95%EB%8B%B4%EC%88%9C%EB%8C%80%EA%B5%AD/place/1566903458?c=15.00,0,0,0,dh&placePath=/home">&nbsp;경기대 정문</a></td></tr>
+                <tr>
+                    <div class="like-container">
+                        <button class="like-button" data-id="1">추천👍</button>
+                        <span class="like-count" id="like-count-1">0</span>
+                    </div>
+                </tr>
+            </table>
         </div>
         <div class="card">
             <img src="guksu.jpg" width = "300" height = "300" alt="맛집2">
             <h3>국수집</h3>
             <table>
-                <tr><th>평점</th><td>4.43</td></tr>
-                <tr><th>식당종류</th><td>국수</td></tr>
-                <tr><th>대표메뉴</th><td>잔치국수, 칼국수</td></tr>
-                <tr><th>위치</th><td><a href = "https://map.naver.com/p/search/%EA%B5%AD%EC%88%98/place/969291944?c=15.00,0,0,0,dh&placePath=%3Fentry%253Dbmp">경기 수원시 장안구 창훈로66번길 16-14 신라족발</a></td></tr>
+                <tr><th>평점</th><td>&nbsp;4.43</td></tr>
+                <tr><th>식당종류</th><td>&nbsp;국수</td></tr>
+                <tr><th>대표메뉴</th><td>&nbsp;잔치국수, 칼국수</td></tr>
+                <tr><th>위치</th><td><a href = "https://map.naver.com/p/search/%EA%B5%AD%EC%88%98/place/969291944?c=15.00,0,0,0,dh&placePath=%3Fentry%253Dbmp">&nbsp;경기대 정문</a></td></tr>
+                <tr>
+                    <div class="like-container">
+                        <button class="like-button" data-id="2">추천👍</button>
+                        <span class="like-count" id="like-count-2">0</span>
+                    </div>
+                </tr>
             </table>
-            
-            <input type="button" value= "추천">
-            <input type="button" value= "비추천">
         </div>
         <div class="card">
             <img src="catharsis.jpg" width = "300" height = "300" alt="맛집3">
             <h3>카타르시스</h3>
-            <p>평점 : 4.66<br>
-                식당종류 : 맥주, 호프<br>
-                대표메뉴 : 수육튀김<br>
-                위치: <a href = "https://map.naver.com/p/search/%EC%B9%B4%ED%83%80%EB%A5%B4%EC%8B%9C%EC%8A%A4/place/1681812573?c=15.00,0,0,0,dh">경기 수원시 영통구 대학1로 16</a><br>
-            </p>
-            <input type="button" value= "추천">
-            <input type="button" value= "비추천">
+            <table>
+                <tr><th>평점</th><td>&nbsp;4.66</td></tr>
+                <tr><th>식당종류</th><td>&nbsp;맥주, 호프</td></tr>
+                <tr><th>대표메뉴</th><td>&nbsp;수육튀김</td></tr>
+                <tr><th>위치</th><td><a href = "https://map.naver.com/p/search/%EC%B9%B4%ED%83%80%EB%A5%B4%EC%8B%9C%EC%8A%A4/place/1681812573?c=15.00,0,0,0,dh">&nbsp;경기대 후문</a></td></tr>
+                <tr>
+                    <div class="like-container">
+                        <button class="like-button" data-id="3">추천👍</button>
+                        <span class="like-count" id="like-count-3">0</span>
+                    </div>
+                </tr>
+                </table>
         </div>
         <div class="card">
             <img src="genko.jpg" width = "300" height = "300" alt="맛집3">
             <h3>겐코쇼쿠도</h3>
-            <p>평점 : 4.37<br>
-                식당종류 : 일식당<br>
-                대표메뉴 : 차슈라멘, 스테이크덮밥<br>
-                위치: <br>
-            </p>
-            <input type="button" value= "추천">
-            <input type="button" value= "비추천">
+                <table>
+                    <tr><th>평점</th><td>&nbsp;4.37</td></tr>
+                    <tr><th>식당종류</th><td>&nbsp;일식당</td></tr>
+                    <tr><th>대표메뉴</th><td>&nbsp;차슈라멘, 스테이크덮밥</td></tr>
+                    <tr><th>위치</th><td><a href = "https://map.naver.com/p/search/%EA%B2%90%EC%BD%94/place/1584732999?c=15.00,0,0,0,dh&placePath=%3Fentry%253Dbmp">&nbsp;경기대 후문</a></td></tr>
+                    <tr>
+                        <div class="like-container">
+                            <button class="like-button" data-id="4">추천👍</button>
+                            <span class="like-count" id="like-count-4">0</span>
+                        </div>
+                    </tr>
+                </table>
         </div>
         <div class="card">
             <img src="https://via.placeholder.com/300" width = "300" height = "300" alt="맛집3">
-            <h3></h3>
-            <p>평점 : <br>
-                식당종류 : <br>
-                대표메뉴 : <br>
-                위치: <br>
-            </p>
-            <input type="button" value= "추천">
-            <input type="button" value= "비추천">
+            <h3>낭만떡볶이</h3>
+            <table>
+                <tr><th>평점</th><td>&nbsp;4.53</td></tr>
+                <tr><th>식당종류</th><td>&nbsp;떡볶이</td></tr>
+                <tr><th>대표메뉴</th><td>&nbsp;낭만떡볶이</td></tr>
+                <tr><th>위치</th><td><a href = "https://map.naver.com/p/search/%EB%82%AD%EB%A7%8C%EB%96%A1%EB%B3%B6%EC%9D%B4/place/20064254?c=15.00,0,0,0,dh&placePath=%3Fentry%253Dbmp">&nbsp;경기대 정문</a></td></tr>
+                <tr>
+                    <div class="like-container">
+                        <button class="like-button" data-id="5">추천👍</button>
+                        <span class="like-count" id="like-count-5">0</span>
+                    </div>
+                </tr>
+                </table>
         </div>
         <div class="card">
             <img src="https://via.placeholder.com/300" width = "300" height = "300" alt="맛집3">
-            <h3></h3>
-            <p>평점 : <br>
-                식당종류 : <br>
-                대표메뉴 : <br>
-                위치: <br>
-            </p>
-            <input type="button" value= "추천">
-            <input type="button" value= "비추천">
+            <h3>대낚식당 광교점</h3>
+            <table>
+                <tr><th>평점</th><td>&nbsp;정보 없음</td></tr>
+                <tr><th>식당종류</th><td>&nbsp;한식</td></tr>
+                <tr><th>대표메뉴</th><td>&nbsp;곱도리탕, 대낙덮밥</td></tr>
+                <tr><th>위치</th><td><a href = "https://map.naver.com/p/search/%EB%8C%80%EB%82%9A%EC%8B%9D%EB%8B%B9/place/1205862575?c=15.00,0,0,0,dh&placePath=/home">&nbsp;경기대 후문
+                </a></td></tr>
+                <tr>
+                    <div class="like-container">
+                        <button class="like-button" data-id="6">추천👍</button>
+                        <span class="like-count" id="like-count-6">0</span>
+                    </div>
+                </tr>
+                </table>
+            </div>
+            <script src="script.js"></script>
         </div>
         </div>
-        <input type="button" value= "더 보 기" style= "float: right;"><br><br>
+        <input type="button" value= "더 보 기" style= "float: right;"><br>
         </div><br>
 
         <div id="middle">
