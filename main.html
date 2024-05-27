@@ -94,21 +94,38 @@
             margin-top: 10px;
             text-align: left;
         }
-
-        #middle{
-            width : 100%;
-            height : auto;
-           
-            h1 { text-align: center; }
-            h2 { text-align: center; }
-            h3 { text-align: center; }
+        #middle {
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
         }
+
+        #middle h1,
+        #middle h2,
+        #middle h3 {
+            text-align: center;
+        }
+
         .box {
             border-width: medium;
             border-style: dashed;
             border-color: black;
             border-radius: 10px;
+            width: 80%; 
+            padding: 20px;
+            box-sizing: border-box;
+            display: inline-block;
         }
+
+
+        input[type="button"] {
+            margin-top: 20px;
+            align-self: flex-end;
+        }
+     
         #bottom{
             width : 100%;
             height : auto;
@@ -193,9 +210,10 @@
     <div class = "nav">
         <div class="slider">
             <div class="slides">
-                <div class="slide"><img src="genko.jpg" alt="Image 1"></div>
-                <div class="slide"><img src="jungdam.jpg" alt="Image 2"></div>
-                <div class="slide"><img src="catharsis.jpg" alt="Image 2"></div>
+                <div class="slide"><img src="img_4.png" alt="Image 1"></div>
+                <div class="slide"><img src="img_2.png" alt="Image 2"></div>
+                <div class="slide"><img src="img_3.png" alt="Image 3"></div>
+                <div class="slide"><img src="img_1.png" alt="Image 4"></div> 
             </div>
         </div>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -300,42 +318,23 @@
         <input type="button" value= "더 보 기" style= "float: right;"><br>
         </div>
 
-        <div id = "middle">
-        <h1>정책</h1>
-        <div><h3>자취하는 청년을 위한 주거지원 정책들</h3></div><br>
+        <div id="middle">
+            <h1>정책</h1>
+            <div><h3>자취하는 청년을 위한 주거지원 정책들</h3></div>
         <div class="box">
-            <h2>청년월세 특별지원</h2><br>
-            <h4>청년층 주거비 부담을 낮추고자 국토 교통부에서
-                월 최대 20만원씩 12개월분 월세를 지원하는
-                '청년월세 특별지원'을 실시<br>
-                 - 대상자의 거주지 관계없이 지원<br>
-                 - 소득이 낮은 청년을 우선으로 지원<br>
-                 - 대상자 : 만 19세~34세 청년으로 부모와 따로 거주하는 무주택자이며 보증금 5천만원 이하, 월세 60만원 이하 주택에 거주하는 자<br>
-                 - !주의 : 지자체에서 실시하는 청년 월세 지원을 받았을 경우 특별지원 받기 어려움
-            </h4>
+            <h2>청년월세 특별지원</h2>
+            <h4>청년층 주거비 부담을 낮추고자 국토 교통부에서 월 최대 20만원씩 12개월분 월세를 지원하는 '청년월세 특별지원'을 실시</h4>
         </div>
-        <br>
         <div class="box">
-            <h2>청년 전월세보증금 대출</h2><br>
-            <h4>중소기업에 취업한 청년들에게 낮은 금리로 전월세 보증금 대출을 지원하는 정책<br>
-                - 대상자 : 만 19세 ~ 34세 이하 청년으로 부부합산 연 소득이 5천만원 이하(외벌이 3천5백만원 이하)이며, 순자산 가액 3.25억원 이하인 무주택 세대주<br>
-                - 대출 금리 : 연 1.2%<br>
-                - 대출 한도 : 최대 1억원 이내<Br>
-                - 대출 기간 : 최초 2년 (4회까지 연장하여 최장 10년 이용 가능)
-            </h4>
+            <h2>청년 전월세보증금 대출</h2>
+            <h4>중소기업에 취업한 청년들에게 낮은 금리로 전월세 보증금 대출을 지원하는 정책</h4>
         </div>
-        <br>
         <div class="box">
-            <h2>행복 주택</h2><br>
-            <h4>청년들의 주거안정을 위한 공공 임대 주택 <br>
-                - 대상자 : 무주택요건 및 소득, 자산 기준을 만족하는 대학생, 청년 등 <br> 
-                - 입주 비용 : 시세보다 60~80% 저렴<br>
-                - 위치 : 지역별 역세권, 숲세권, 학세권 등에 위치<br>
-                - 거주 기간 : 최대 6년, 결혼시 10년까지<br>
-            </h4>
-        </div><br>
-        <input type="button" value= "더 보 기" style= "float: right;">
+            <h2>행복 주택</h2>
+            <h4>청년들의 주거안정을 위한 공공 임대 주택</h4>
         </div>
+        <input type="button" value="더 보 기">
+    </div>
         <div id = "bottom"></div>
     </div>
     <div class = "footer">
