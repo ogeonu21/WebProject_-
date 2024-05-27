@@ -1,35 +1,18 @@
-
-
-.rating-container {
-    display: flex;
-    gap: 20px;
+.container {
+    text-align: center;
 }
 
-button {
-    padding: 10px 20px;
-    font-size: 16px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 10px;
+.like-container {
+    margin-bottom: 20px;
 }
 
-.like-btn {
-    background-color: #4CAF50;
-    color: white;
+.like-button {
+    font-size: 1.5rem;
+    margin: 0 10px;
+    padding: 10px;
 }
 
-.dislike-btn {
-    background-color: #f44336;
-    color: white;
-}
-
-button:hover {
-    opacity: 0.8;
-}
-
-button:active {
-    transform: scale(0.98);
+.like-count {
+    font-size: 1.2rem;
+    margin-left: 5px;
 }
