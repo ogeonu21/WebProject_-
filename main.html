@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -57,7 +58,8 @@
 
         .nav{
             width : auto;
-            height : 500px;
+            height : auto;
+            max-height : auto;
         }
         .section{
             width : 80%;
@@ -75,6 +77,19 @@
             text-align: center;
             position : relative;
             clear : both;
+        }
+        .container_top{
+            text-align: center;
+        }
+        #highlight {
+            display: inline-block;
+            border-bottom: 5px solid #e8e8e8;
+            padding-bottom: 5px;
+            transition: all 0.3s ease;
+        }
+
+        #highlight:hover {
+            border-bottom: 5px solid #090909;
         }
         .card {
             width: 300px;
@@ -107,7 +122,7 @@
             text-align: center;
          }
 
-        .container{
+        #middle .container{
                 display:flex;
                 flex-direction: row;
         }
@@ -139,8 +154,9 @@
         .slider {
             width: 100%;
             max-width: 100%;
-            height : 500px;
+            height : auto;
             overflow: hidden;
+            position : relative;
         }
 
         .slides {
@@ -157,6 +173,27 @@
             width: 100%;
             display: block;
         }
+        .slider button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            z-index: 10;
+            border-radius: 5px;
+        }
+
+        .slider button.prev {
+            left: 10px;
+        }
+
+        .slider button.next {
+            right: 10px;
+        }
+
         #scrollToTopBtn {
             width : 50px; height : 50px;
             position: fixed;
@@ -174,7 +211,7 @@
         }
 
         #scrollToTopBtn:hover {
-            background-color: #0056b3;
+            background-color: #1b87fa;
         }
     </style>
 </head>
@@ -219,11 +256,22 @@
                 <div class="slide"><img src="img_3.png" alt="Image 3"></div>
                 <div class="slide"><img src="img_1.png" alt="Image 4"></div> 
             </div>
+            <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+            <button class="next" onclick="changeSlide(1)">&#10095;</button>
         </div>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script>
+            let currentIndex = 0;
+
+            function changeSlide(direction) {
+                const slides = document.querySelector('.slides');
+                const totalSlides = slides.children.length;
+                currentIndex = (currentIndex + direction + totalSlides) % totalSlides;
+                const offset = -currentIndex * 100;
+                slides.style.transform = `translateX(${offset}%)`;
+            }
+
             $(document).ready(function(){
-                let currentIndex = 0;
                 const slides = $('.slide');
                 const totalSlides = slides.length;
             
@@ -244,7 +292,23 @@
 
     <div class = "section">
         <div id = "top">
-        <br><h1>맛집</h1>
+            <div class="container_top">
+                <h1 id = "highlight">맛집</h1>
+            </div>
+            <script>
+                document.addEventListener('DOMContentLoaded', function() {
+                const highlight = document.getElementById('highlight');
+                const rect = highlight.getBoundingClientRect();
+
+                window.addEventListener('scroll', function() {
+                    if (window.scrollY > rect.top) {
+                        highlight.style.borderColor = '#090909';
+                    } else {
+                        highlight.style.borderColor = '#e8e8e8';
+                    }
+                });
+            });
+            </script>
         <div>
         <div class="card">
             <img src="jungdam.jpg" width = "300" height = "300" alt="맛집1">
@@ -369,8 +433,8 @@
              </div>
         <input type="button" value= "더 보 기" style= "float : right;"><br>
     </div>
-        <div id = "bottom"></div>
-    </div>
+        <div id = "bottom">
+        </div>
     <div class = "footer">
     </div>
 </body>
