@@ -16,3 +16,29 @@
     font-size: 1.2rem;
     margin-left: 5px;
 }
+.heart {
+  width: 15px;
+  height: 15px;
+  background: #ea2027;
+  position: relative;
+  margin: 3px auto;
+transform: rotate(45deg);
+}
+.heart::before {
+  content: "";
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  left: -50%;
+  border-radius: 50%;
+  background: #ea2027;
+}
+.heart::after {
+  content: "";
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  top: -50%;
+  border-radius: 50%;
+  background: #ea2027;
+}
