@@ -5,249 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>자취 모여라</title>
     <link rel="stylesheet" href="stylesheet.css">
+    <link href="logo.jpg" rel="shortcut icon" type="image/x-icon">
     <script src="script.js"></script>
-    <style>
-        *{
-            margin : 0 auto; padding : 0;
-        }
-        a{
-            text-decoration-line : none;
-        }
-        a:link{color : black;}
-        .card a:hover{color : rgb(103, 103, 252);}
-        a:visited{color : black;}
-        body{
-            background-color :rgba(245, 245, 245, 0.3);
-            position : relative;
-            font-family: Arial, Helvetica, sans-serif;
-        }
-        .header{
-            width : auto;
-            height : 70px;
-            background-color : grey;
-        }
-        .header_Logo{
-            float : left;
-            top : 50%;
-            bottom : 50%;
-            padding : 10px;
-            padding-left : 50px;
-        }
-        .container {
-            width: 1080px;
-            overflow: hidden;
-            margin: 0 auto;
-            margin-bottom: 8px;
-        }
-        ul.header_Nav {
-            float: left;
-            padding-top: 8px;
-            padding-bottom: 8px;
-            padding-left: 10;
-        }
-        ul.header_Nav>li {
-            list-style-type: none;
-            float: left;
-            padding-left : 10px;
-            padding-right : 10px;
-        }
-        ul.header_Nav>li:first-child {
-            padding-left: 200px;
-        }
-        
-
-        .nav{
-            width : auto;
-            height : auto;
-            max-height : auto;
-        }
-        .section{
-            width : 80%;
-            position: relative;
-        }
-        .footer{
-            width : auto;
-            height : 300px;
-            background-color : black;
-        }
-        #top{
-            width : 100%;
-            height : auto;
-
-            text-align: center;
-            position : relative;
-            clear : both;
-        }
-        .container_top{
-            text-align: center;
-        }
-        .highlight {
-            display: inline-block;
-            border-bottom: 5px solid #e8e8e8;
-            padding-bottom: 5px;
-            transition: all 0.3s ease;
-        }
-
-        .highlight:hover {
-            border-bottom: 5px solid #090909;
-        }
-        .card {
-            width: 300px;
-            height : 350px;
-            margin: 20px;
-            padding: 20px;
-            background-color: white;
-            border-radius: 10px;
-            display: inline-block;
-            vertical-align: top;
-        }
-        .card img {
-            width: 60%;
-            height: 50%;
-            border-radius: 5px;
-        }
-        .card table {
-            margin-top: 3px;
-            text-align: left;
-        }
-        #middle {
-            width: 100%;
-            height: auto;
-            gap: 20px;
-            clear : both;
-        }
-         #middle h1,
-         #middle h2,
-         #middle h3 {
-            text-align: center;
-         }
-
-        #middle .container{
-                display:flex;
-                flex-direction: row;
-        }
-        .box {
-            border-width: medium;
-            border-style: dashed;
-            border-color: black;
-            border-radius: 10px;
-            width: 80%; 
-            height: auto;
-            margin: 10px;
-            padding: 20px;
-        }
-
-
-        input[type="button"] {
-            margin-top: 20px;
-            align-self: flex-end;
-            float : right;
-        }
-     
-        #bottom{
-            width : 100%;
-            height : auto;
-            background-color : green;
-            clear : both;
-        }
-
-        .slider {
-            width: 100%;
-            max-width: 100%;
-            height : auto;
-            overflow: hidden;
-            position : relative;
-        }
-
-        .slides {
-            display: flex;
-            transition: transform 0.5s ease-in-out;
-        }
-
-        .slide {
-            min-width: 100%;
-            box-sizing: border-box;
-        }
-
-        .slide img {
-            width: 100%;
-            display: block;
-        }
-        .slider button {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background-color: rgba(0, 0, 0, 0.5);
-            color: white;
-            border: none;
-            padding: 10px;
-            cursor: pointer;
-            z-index: 10;
-            border-radius: 5px;
-        }
-
-        .slider button.prev {
-            left: 10px;
-        }
-
-        .slider button.next {
-            right: 10px;
-        }
-
-        #scrollToTopBtn {
-            width : 50px; height : 50px;
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            padding: 10px 10px;
-            font-size: 16px;
-            background-color: #dbdbdb;
-            color: black;
-            border: none;
-            border-radius: 50%;
-            cursor: pointer;
-            display: none;
-            font-weight: bold;
-        }
-
-        #scrollToTopBtn:hover {
-            background-color: #1b87fa;
-        }
-    </style>
 </head>
 
 <body>
-    <div class = "header"><h1 class = "header_Logo">자취모여라</h1><ul class="header_Nav">
-        <li><a href = "#top">맛집</a></li>
-        <li><a href = "#middle">정책</a></li>
-        <li><a href = "#bottom">청소</a></li>
+    <div class = "header"><div class = "header_Logo"><h1>자취모여라</h1></div>
+        <div class="header_Nav">
+            <div class="row columns">
+              <ul class="menu align-center expanded text-center SMN_effect-35">
+                <li><a href="#top" data-hover="dfd">맛집</a></li>
+                <li><a href="#middle" data-hover="aasd">정책</a></li>
+                <li><a href="#bottom" data-hover="fds">청소</a></li>
+              </ul>
+            </div>
+          </div>
     </ul>
     </div>
     
-    <div>
-        <a href = "#home"></a>
-        <input  type = "button" name = "position_up_button" value = "TOP" id="scrollToTopBtn">
-        <script>
-            document.addEventListener('DOMContentLoaded', function() {
-                const scrollToTopBtn = document.getElementById('scrollToTopBtn');
-
-                window.addEventListener('scroll', function() {
-                    if (window.scrollY > 200) {
-                        scrollToTopBtn.style.display = 'block';
-                    } else {
-                        scrollToTopBtn.style.display = 'none';
-                    }
-                });
-                scrollToTopBtn.addEventListener('click', function() {
-                    window.scrollTo({
-                        top: 0,
-                        behavior: 'smooth'
-                    });
-                });
-            });
-        </script>
-    </div>
-
     <div class = "nav">
         <div class="slider">
             <div class="slides">
@@ -288,16 +63,38 @@
                 setInterval(nextSlide, 5000);
             });
         </script>
+        <div class="scrollToTopBtn">
+            <input type = "button" name = "position_up_button" value = "TOP" id="scrollToTopBtn">
+            <script>
+                document.addEventListener('DOMContentLoaded', function() {
+                    const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+    
+                    window.addEventListener('scroll', function() {
+                        if (window.scrollY > 200) {
+                            scrollToTopBtn.style.display = 'block';
+                        } else {
+                            scrollToTopBtn.style.display = 'none';
+                        }
+                    });
+                    scrollToTopBtn.addEventListener('click', function() {
+                        window.scrollTo({
+                            top: 0,
+                            behavior: 'smooth'
+                        });
+                    });
+                });
+            </script>
+        </div>
     </div>
 
     <div class = "section">
         <div id = "top">
-            <div class="container_top">
-                <h1 id = "highlight_top" class = "highlight">맛집</h1>
+            <div class="container_Name">
+                <h1 id = "highlight_Top" class = "highlight">맛집</h1>
             </div>
             <script>
                 document.addEventListener('DOMContentLoaded', function() {
-                const highlight = document.getElementById('highlight_top');
+                const highlight = document.getElementById('highlight_Top');
                 const rect = highlight.getBoundingClientRect();
 
                 window.addEventListener('scroll', function() {
@@ -309,116 +106,117 @@
                 });
             });
             </script>
-        <div>
-        <div class="card">
-            <img src="jungdam.jpg" width = "300" height = "300" alt="맛집1">
-            <h3>정담순대국</h3>
-            <table>
-                <tr><th>평점</th><td>&nbsp;4.51</td></tr>
-                <tr><th>식당종류</th><td>&nbsp;순대, 순댓국</td></tr>
-                <tr><th>대표메뉴</th><td>&nbsp;얼큰순대국</td></tr>
-                <tr><th>위치</th><td><a href = "https://map.naver.com/p/search/%EC%A0%95%EB%8B%B4%EC%88%9C%EB%8C%80%EA%B5%AD/place/1566903458?c=15.00,0,0,0,dh&placePath=/home">&nbsp;경기대 정문</a></td></tr>
-                <tr>
-                    <div class="like-container">
-                        <button class="bubbly-button" data-id="1"><div class = "bubbly-button-child1"></div><div class = "bubbly-button-child2"></div></button>
-                        <span class="like-count" id="like-count-1">0</span>
-                    </div>
-                </tr>
-            </table>
-        </div>
-        <div class="card">
-            <img src="guksu.jpg" width = "300" height = "300" alt="맛집2">
-            <h3>국수집</h3>
-            <table>
-                <tr><th>평점</th><td>&nbsp;4.43</td></tr>
-                <tr><th>식당종류</th><td>&nbsp;국수</td></tr>
-                <tr><th>대표메뉴</th><td>&nbsp;잔치국수, 칼국수</td></tr>
-                <tr><th>위치</th><td><a href = "https://map.naver.com/p/search/%EA%B5%AD%EC%88%98/place/969291944?c=15.00,0,0,0,dh&placePath=%3Fentry%253Dbmp">&nbsp;경기대 정문</a></td></tr>
-                <tr>
-                    <div class="like-container">
-                        <button class="bubbly-button" data-id="2"><div class = "bubbly-button-child1"></div><div class = "bubbly-button-child2"></div></button>
-                        <span class="like-count" id="like-count-2">0</span>
-                    </div>
-                </tr>
-            </table>
-        </div>
-        <div class="card">
-            <img src="catharsis.jpg" width = "300" height = "300" alt="맛집3">
-            <h3>카타르시스</h3>
-            <table>
-                <tr><th>평점</th><td>&nbsp;4.66</td></tr>
-                <tr><th>식당종류</th><td>&nbsp;맥주, 호프</td></tr>
-                <tr><th>대표메뉴</th><td>&nbsp;수육튀김</td></tr>
-                <tr><th>위치</th><td><a href = "https://map.naver.com/p/search/%EC%B9%B4%ED%83%80%EB%A5%B4%EC%8B%9C%EC%8A%A4/place/1681812573?c=15.00,0,0,0,dh">&nbsp;경기대 후문</a></td></tr>
-                <tr>
-                    <div class="like-container">
-                        <button class="bubbly-button" data-id="3"><div class = "bubbly-button-child1"></div><div class = "bubbly-button-child2"></div></button>
-                        <span class="like-count" id="like-count-3">0</span>
-                    </div>
-                </tr>
-                </table>
-        </div>
-        <div class="card">
-            <img src="genko.jpg" width = "300" height = "300" alt="맛집3">
-            <h3>겐코쇼쿠도</h3>
-                <table>
-                    <tr><th>평점</th><td>&nbsp;4.37</td></tr>
-                    <tr><th>식당종류</th><td>&nbsp;일식당</td></tr>
-                    <tr><th>대표메뉴</th><td>&nbsp;차슈라멘, 스테이크덮밥</td></tr>
-                    <tr><th>위치</th><td><a href = "https://map.naver.com/p/search/%EA%B2%90%EC%BD%94/place/1584732999?c=15.00,0,0,0,dh&placePath=%3Fentry%253Dbmp">&nbsp;경기대 후문</a></td></tr>
-                    <tr>
-                        <div class="like-container">
-                            <button class="bubbly-button" data-id="4"><div class = "bubbly-button-child1"></div><div class = "bubbly-button-child2"></div></button>
-                            <span class="like-count" id="like-count-4">0</span>
-                        </div>
-                    </tr>
-                </table>
-        </div>
-        <div class="card">
-            <img src="thukbokki.jpg" width = "300" height = "300" alt="맛집3">
-            <h3>낭만떡볶이</h3>
-            <table>
-                <tr><th>평점</th><td>&nbsp;4.53</td></tr>
-                <tr><th>식당종류</th><td>&nbsp;떡볶이</td></tr>
-                <tr><th>대표메뉴</th><td>&nbsp;낭만떡볶이</td></tr>
-                <tr><th>위치</th><td><a href = "https://map.naver.com/p/search/%EB%82%AD%EB%A7%8C%EB%96%A1%EB%B3%B6%EC%9D%B4/place/20064254?c=15.00,0,0,0,dh&placePath=%3Fentry%253Dbmp">&nbsp;경기대 정문</a></td></tr>
-                <tr>
-                    <div class="like-container">
-                        <button class="bubbly-button" data-id="5"><div class = "bubbly-button-child1"></div><div class = "bubbly-button-child2"></div></button>
-                        <span class="like-count" id="like-count-5">0</span>
-                    </div>
-                </tr>
-                </table>
-        </div>
-        <div class="card">
-            <img src="denak.jpg" width = "300" height = "300" alt="맛집3">
-            <h3>대낚식당 광교점</h3>
-            <table>
-                <tr><th>평점</th><td>&nbsp;정보 없음</td></tr>
-                <tr><th>식당종류</th><td>&nbsp;한식</td></tr>
-                <tr><th>대표메뉴</th><td>&nbsp;곱도리탕, 대낙덮밥</td></tr>
-                <tr><th>위치</th><td><a href = "https://map.naver.com/p/search/%EB%8C%80%EB%82%9A%EC%8B%9D%EB%8B%B9/place/1205862575?c=15.00,0,0,0,dh&placePath=/home">&nbsp;경기대 후문
-                </a></td></tr>
-                <tr>
-                    <div class="like-container">
-                        <button class="bubbly-button" data-id="6"><div class = "bubbly-button-child1"></div><div class = "bubbly-button-child2"></div></button>
-                        <span class="like-count" id="like-count-6">0</span>
-                    </div>
-                </tr>
-                </table>
+            <div>
+                <div class="card">
+                    <img src="jungdam.jpg" width = "300" height = "300" alt="맛집1">
+                    <h3>정담순대국</h3>
+                    <table>
+                        <tr><th>평점</th><td>&nbsp;4.51</td></tr>
+                        <tr><th>식당종류</th><td>&nbsp;순대, 순댓국</td></tr>
+                        <tr><th>대표메뉴</th><td>&nbsp;얼큰순대국</td></tr>
+                        <tr><th>위치</th><td><a href = "https://map.naver.com/p/search/%EC%A0%95%EB%8B%B4%EC%88%9C%EB%8C%80%EA%B5%AD/place/1566903458?c=15.00,0,0,0,dh&placePath=/home">&nbsp;경기대 정문</a></td></tr>
+                        <tr>
+                            <div class="like-container">
+                                <button class="bubbly-button" data-id="1"><div class = "bubbly-button-child1"></div><div class = "bubbly-button-child2"></div></button>
+                                <span class="like-count" id="like-count-1">0</span>
+                            </div>
+                        </tr>
+                    </table>
+                </div>
+                <div class="card">
+                    <img src="guksu.jpg" width = "300" height = "300" alt="맛집2">
+                    <h3>국수집</h3>
+                    <table>
+                        <tr><th>평점</th><td>&nbsp;4.43</td></tr>
+                        <tr><th>식당종류</th><td>&nbsp;국수</td></tr>
+                        <tr><th>대표메뉴</th><td>&nbsp;잔치국수, 칼국수</td></tr>
+                        <tr><th>위치</th><td><a href = "https://map.naver.com/p/search/%EA%B5%AD%EC%88%98/place/969291944?c=15.00,0,0,0,dh&placePath=%3Fentry%253Dbmp">&nbsp;경기대 정문</a></td></tr>
+                        <tr>
+                            <div class="like-container">
+                                <button class="bubbly-button" data-id="2"><div class = "bubbly-button-child1"></div><div class = "bubbly-button-child2"></div></button>
+                                <span class="like-count" id="like-count-2">0</span>
+                            </div>
+                        </tr>
+                    </table>
+                </div>
+                <div class="card">
+                    <img src="catharsis.jpg" width = "300" height = "300" alt="맛집3">
+                    <h3>카타르시스</h3>
+                    <table>
+                        <tr><th>평점</th><td>&nbsp;4.66</td></tr>
+                        <tr><th>식당종류</th><td>&nbsp;맥주, 호프</td></tr>
+                        <tr><th>대표메뉴</th><td>&nbsp;수육튀김</td></tr>
+                        <tr><th>위치</th><td><a href = "https://map.naver.com/p/search/%EC%B9%B4%ED%83%80%EB%A5%B4%EC%8B%9C%EC%8A%A4/place/1681812573?c=15.00,0,0,0,dh">&nbsp;경기대 후문</a></td></tr>
+                        <tr>
+                            <div class="like-container">
+                                <button class="bubbly-button" data-id="3"><div class = "bubbly-button-child1"></div><div class = "bubbly-button-child2"></div></button>
+                                <span class="like-count" id="like-count-3">0</span>
+                            </div>
+                        </tr>
+                        </table>
+                </div>
+                <div class="card">
+                    <img src="genko.jpg" width = "300" height = "300" alt="맛집4">
+                    <h3>겐코쇼쿠도</h3>
+                        <table>
+                            <tr><th>평점</th><td>&nbsp;4.37</td></tr>
+                            <tr><th>식당종류</th><td>&nbsp;일식당</td></tr>
+                            <tr><th>대표메뉴</th><td>&nbsp;차슈라멘, 스테이크덮밥</td></tr>
+                            <tr><th>위치</th><td><a href = "https://map.naver.com/p/search/%EA%B2%90%EC%BD%94/place/1584732999?c=15.00,0,0,0,dh&placePath=%3Fentry%253Dbmp">&nbsp;경기대 후문</a></td></tr>
+                            <tr>
+                                <div class="like-container">
+                                    <button class="bubbly-button" data-id="4"><div class = "bubbly-button-child1"></div><div class = "bubbly-button-child2"></div></button>
+                                    <span class="like-count" id="like-count-4">0</span>
+                                </div>
+                            </tr>
+                        </table>
+                </div>
+                <div class="card">
+                    <img src="thukbokki.jpg" width = "300" height = "300" alt="맛집5">
+                    <h3>낭만떡볶이</h3>
+                    <table>
+                        <tr><th>평점</th><td>&nbsp;4.53</td></tr>
+                        <tr><th>식당종류</th><td>&nbsp;떡볶이</td></tr>
+                        <tr><th>대표메뉴</th><td>&nbsp;낭만떡볶이</td></tr>
+                        <tr><th>위치</th><td><a href = "https://map.naver.com/p/search/%EB%82%AD%EB%A7%8C%EB%96%A1%EB%B3%B6%EC%9D%B4/place/20064254?c=15.00,0,0,0,dh&placePath=%3Fentry%253Dbmp">&nbsp;경기대 정문</a></td></tr>
+                        <tr>
+                            <div class="like-container">
+                                <button class="bubbly-button" data-id="5"><div class = "bubbly-button-child1"></div><div class = "bubbly-button-child2"></div></button>
+                                <span class="like-count" id="like-count-5">0</span>
+                            </div>
+                        </tr>
+                        </table>
+                </div>
+                <div class="card">
+                    <img src="denak.jpg" width = "300" height = "300" alt="맛집6">
+                    <h3>대낚식당 광교점</h3>
+                    <table>
+                        <tr><th>평점</th><td>&nbsp;정보 없음</td></tr>
+                        <tr><th>식당종류</th><td>&nbsp;한식</td></tr>
+                        <tr><th>대표메뉴</th><td>&nbsp;곱도리탕, 대낙덮밥</td></tr>
+                        <tr><th>위치</th><td><a href = "https://map.naver.com/p/search/%EB%8C%80%EB%82%9A%EC%8B%9D%EB%8B%B9/place/1205862575?c=15.00,0,0,0,dh&placePath=/home">&nbsp;경기대 후문
+                        </a></td></tr>
+                        <tr>
+                            <div class="like-container">
+                                <button class="bubbly-button" data-id="6"><div class = "bubbly-button-child1"></div><div class = "bubbly-button-child2"></div></button>
+                                <span class="like-count" id="like-count-6">0</span>
+                            </div>
+                        </tr>
+                        </table>
+                </div>
             </div>
         </div>
-        </div>
-        <input type="button" value= "더 보 기" style= "float: right;"><br>
-        </div><br>
+
+        <input type="button" value= "더 보 기"><br>
+        <br>
     
         <div id="middle">
-            <div class="container_top">
-                <h1 id = "highlight_middle" class = "highlight">정책</h1>
+            <div class="container_Name">
+                <h1 id = "highlight_Middle" class = "highlight">정책</h1>
             </div>
             <script>
                 document.addEventListener('DOMContentLoaded', function() {
-                const highlight = document.getElementById('highlight_middle');
+                const highlight = document.getElementById('highlight_Middle');
                 const rect = highlight.getBoundingClientRect();
 
                 window.addEventListener('scroll', function() {
@@ -451,31 +249,34 @@
                 function hide3(){
                     document.getElementById("img2").src="";      
                 }
+
             </script>
             <div class="container">
                 <div class="box" onmouseover = "show1()" onclick = "show1()" onmouseout="hide1()">
                     <h2>청년월세 특별지원</h2><br>
                     <div><img id = "img"src=""></div>
                     <h4>청년층 주거비 부담을 낮추고자 국토 교통부에서 월 최대 20만원씩 12개월분 월세를 지원하는 '청년월세 특별지원'을 실시</h4>
-                    <a href="https://www.bokjiro.go.kr">사이트 : https://www.bokjiro.go.kr</a>
+                    <a href="https://www.bokjiro.go.kr">링크 바로가기</a>
                 </div>
                 <div class="box" onmouseover = "show2()" onclick = "show2()" onmouseout="hide2()">
                     <h2>청년 주거급여 분리지급</h2><br>
                     <div><img id = "img1"src=""></div>
                     <h4>부모로부터 독립한 20대 저소득 청년에게 지역, 가구원수별 주거급여 차등 지원하는 정책을 실시</h4><br>
-                    <a href="https://www.bokjiro.go.kr">사이트 : https://www.bokjiro.go.kr</a>
+                    <a href="https://www.bokjiro.go.kr">링크 바로가기</a>
                 </div>
                  <div class="box" onmouseover = "show3()" onclick = "show3()" onmouseout="hide3()">
                     <h2>행복 주택</h2><br>
                     <div><img id = "img2"src=""></div>
                     <h4>젊은 계층의 주거안정을 위해 국가 재정과 국민주택기금을 지원받아 시중 시세보다 저렴하게 공급하는 공공임대주택</h4><Br>
-                    <a href="https://apply.lh.or.kr/lhapply/cm/cntnts/cntntsView.do?mi=1201663&cntntsId=1201391">사이트 : https://apply.lh.or.kr/lhapply/cm/cntnts/cntntsView.do?mi=1201663&cntntsId=1201391</a>
+                    <a href="https://apply.lh.or.kr/lhapply/cm/cntnts/cntntsView.do?mi=1201663&cntntsId=1201391">링크 바로가기</a>
                 </div>
              </div>
-        <input type="button" value= "더 보 기" style= "float : right;"><br>
+        <input type="button" value= "더 보 기"><br>
     </div>
+
         <div id = "bottom">
         </div>
+    </div>
     <div class = "footer">
     </div>
 </body>
