@@ -81,14 +81,14 @@
         .container_top{
             text-align: center;
         }
-        #highlight {
+        .highlight {
             display: inline-block;
             border-bottom: 5px solid #e8e8e8;
             padding-bottom: 5px;
             transition: all 0.3s ease;
         }
 
-        #highlight:hover {
+        .highlight:hover {
             border-bottom: 5px solid #090909;
         }
         .card {
@@ -293,11 +293,11 @@
     <div class = "section">
         <div id = "top">
             <div class="container_top">
-                <h1 id = "highlight">맛집</h1>
+                <h1 id = "highlight_top" class = "highlight">맛집</h1>
             </div>
             <script>
                 document.addEventListener('DOMContentLoaded', function() {
-                const highlight = document.getElementById('highlight');
+                const highlight = document.getElementById('highlight_top');
                 const rect = highlight.getBoundingClientRect();
 
                 window.addEventListener('scroll', function() {
@@ -414,7 +414,23 @@
         </div><br>
 
         <div id="middle">
-            <h1>정책</h1>
+            <div class="container_top">
+                <h1 id = "highlight_middle" class = "highlight">정책</h1>
+            </div>
+            <script>
+                document.addEventListener('DOMContentLoaded', function() {
+                const highlight = document.getElementById('highlight_middle');
+                const rect = highlight.getBoundingClientRect();
+
+                window.addEventListener('scroll', function() {
+                    if (window.scrollY > rect.top) {
+                        highlight.style.borderColor = '#090909';
+                    } else {
+                        highlight.style.borderColor = '#e8e8e8';
+                    }
+                });
+            });
+            </script>
             <div><h3>자취하는 청년을 위한 주거지원 정책들</h3></div>
 
             <div class="container">
