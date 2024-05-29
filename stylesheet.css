@@ -246,7 +246,7 @@ a:hover, a:focus, a:active {
 }
 /* 카드 */
 .card_box{
-  display:flex; flex-direction: row; flex-wrap: wrap; justify=content : center; align-items:center;
+  display:flex; flex-direction: row; flex-wrap: wrap; justify-content : center; align-items:center;
 }
 .card {
   width: 250px;
