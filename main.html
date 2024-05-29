@@ -275,6 +275,29 @@
     </div>
 
         <div id = "bottom">
+            <div class="container_Name">
+            <h1 id = "highlight_bottom" class = "highlight">청소 꿀팁</h1>
+            </div>
+            <script>
+                document.addEventListener('DOMContentLoaded', function() {
+                const highlight = document.getElementById('highlight_Middle');
+                const rect = highlight.getBoundingClientRect();
+
+                window.addEventListener('scroll', function() {
+                    if (window.scrollY > rect.top) {
+                        highlight.style.borderColor = '#090909';
+                    } else {
+                        highlight.style.borderColor = '#e8e8e8';
+                    }
+                });
+            });
+            </script>
+            <div><h3>자취 필수 정보, 청소꿀팁</h3></div>
+        </div>
+        <div class="video-container">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/34agNbk5ylo?si=BF8ZSOLQgwN0G7GM" 
+        title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
     </div>
     <div class = "footer">
