@@ -29,7 +29,7 @@ body{
 }
 .footer{
   width : 100%;
-  height : 300px;
+  height : 200px;
   background-color : black;
 }
 
@@ -241,6 +241,7 @@ a:hover, a:focus, a:active {
   position : relative;
   clear : both;
 }
+/* 카드 */
 .card {
   width: 300px;
   height : 350px;
@@ -250,7 +251,7 @@ a:hover, a:focus, a:active {
   border-radius: 10px;
   display: inline-block;
   vertical-align: top;
-}
+  }
 .card img {
   width: 60%;
   height: 50%;
@@ -265,6 +266,7 @@ a:hover, a:focus, a:active {
   font-size: 1.2rem;
   margin-left: 5px;
 }
+/* 좋아요버튼 */
 .bubbly-button{
   font-family: 'Helvetica', 'Arial', sans-serif;
   display: inline-block;
@@ -310,6 +312,64 @@ a:hover, a:focus, a:active {
   25%  {transform:rotate(0deg)}
   75%  {transform:rotate(90deg)}
   100% {transform:rotate(45deg)}
+}
+/* 링크 툴팁 */
+.tool {
+    cursor: help;
+    position: relative;
+}
+.tool::before,
+.tool::after {
+    left: 50%;
+    opacity: 0;
+    position: absolute;
+    z-index: -100;
+}
+
+.tool:hover::before,
+.tool:focus::before,
+.tool:hover::after,
+.tool:focus::after {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+    z-index: 100; 
+}
+.tool::before {
+    border-style: solid;
+    border-width: 1em 0.75em 0 0.75em;
+    border-color: #3E474F transparent transparent transparent;
+    bottom: 100%;
+    content: "";
+    margin-left: -0.5em;
+    transition: all .65s cubic-bezier(.84,-0.18,.31,1.26), opacity .65s .5s;
+    transform:  scale(.6) translateY(-90%);
+} 
+.tool:hover::before,
+.tool:focus::before {
+    transition: all .65s cubic-bezier(.84,-0.18,.31,1.26) .2s;
+}
+.tool::after {
+    background: #3E474F;
+    border-radius: .25em;
+    bottom: 180%;
+    color: #EDEFF0;
+    content: attr(data-tip);
+    margin-left: -8.75em;
+    padding: 1em;
+    transition: all .65s cubic-bezier(.84,-0.18,.31,1.26) .2s;
+    transform:  scale(.6) translateY(50%);  
+    width: 17.5em;
+}
+.tool:hover::after,
+.tool:focus::after  {
+    transition: all .65s cubic-bezier(.84,-0.18,.31,1.26);
+}
+@media (max-width: 760px) {
+  .tool::after { 
+        font-size: .75em;
+        margin-left: -5em;
+        width: 10em; 
+  }
 }
 
 
@@ -411,11 +471,13 @@ a:hover, a:focus, a:active {
     transform: rotateY(20deg) skewY(-3deg);
 }
 
+
 /* id bottom */
 #bottom{
   width : 100%;
   height : auto;
   clear : both;
+  margin-bottom : 30px;
 }
 #bottom h1,
 #bottom h2,
