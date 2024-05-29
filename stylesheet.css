@@ -88,7 +88,7 @@ body{
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
-a:hover, a:focus {
+a:hover, a:focus, a:active {
   outline: none;
 }
 .menu a {
@@ -129,7 +129,7 @@ a:hover, a:focus {
     transform: rotate(0deg)
   }
 }
-.SMN_effect-35 a:hover {
+.SMN_effect-35 a:hover, .SMN_effect-35 a:active {
   -webkit-animation-name: eff24-move;
   animation-name: eff24-move;
   -webkit-animation-duration: .4s;
@@ -209,7 +209,8 @@ a:hover, a:focus {
 }
 .container_Name {
     text-align: center;
-    margin-top: 50px;
+    margin : 10px;
+    margin-top: 30px;
 }
 .highlight {
     position: relative;
@@ -319,9 +320,6 @@ a:hover, a:focus {
   clear : both;
   font-family: 'Montserrat', sans-serif;
 }
-#middle .container_Name{
-    margin : 10px;
-}
 #middle h1,
 #middle h2,
 #middle h3 {
@@ -418,11 +416,6 @@ a:hover, a:focus {
   width : 100%;
   height : auto;
   clear : both;
-}
-#bottom .container {
-  width: 70%;
-  overflow: hidden;
-  margin: 0 auto;
 }
 #bottom h1,
 #bottom h2,
