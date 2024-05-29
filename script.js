@@ -22,3 +22,57 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     initializeCounts();
 });
+document.addEventListener('DOMContentLoaded', () => {
+    const target = document.getElementById('highlight_Top');
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animate');
+            }
+            else{
+                entry.target.classList.remove('animate');
+            }
+        });
+    }, {
+        threshold: 0.5
+    });
+
+    observer.observe(target);
+});
+document.addEventListener('DOMContentLoaded', () => {
+    const target = document.getElementById('highlight_Middle');
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animate');
+            }
+            else{
+                entry.target.classList.remove('animate');
+            }
+        });
+    }, {
+        threshold: 0.5
+    });
+    document.addEventListener('DOMContentLoaded', () => {
+        const target = document.getElementById('highlight_Bottom');
+    
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate');
+                }
+                else{
+                    entry.target.classList.remove('animate');
+                }
+            });
+        }, {
+            threshold: 0.5
+        });
+    
+        observer.observe(target);
+    });
+
+    observer.observe(target);
+});
