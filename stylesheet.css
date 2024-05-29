@@ -340,3 +340,14 @@ a:hover, a:focus {
   overflow: hidden;
   margin: 0 auto;
 }
+#bottom h1,
+#bottom h2,
+#bottom h3 {
+  text-align: center;
+}
+.video-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
