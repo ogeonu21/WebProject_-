@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,21 +6,19 @@
     <title>자취 모여라</title>
     <link rel="stylesheet" href="stylesheet.css">
     <link href="logo.jpg" rel="shortcut icon" type="image/x-icon">
-    <script src="script.js"></script>
+    
 </head>
-
 <body>
     <div class = "header"><div class = "header_Logo"><h1>자취모여라</h1></div>
         <div class="header_Nav">
             <div class="row columns">
               <ul class="menu align-center expanded text-center SMN_effect-35">
-                <li><a href="#top" data-hover="dfd">맛집</a></li>
-                <li><a href="#middle" data-hover="aasd">정책</a></li>
-                <li><a href="#bottom" data-hover="fds">청소</a></li>
+                <li><a href="#top">맛집</a></li>
+                <li><a href="#middle">정책</a></li>
+                <li><a href="#bottom">청소</a></li>
               </ul>
             </div>
-          </div>
-    </ul>
+        </div>
     </div>
     
     <div class = "nav">
@@ -66,25 +63,6 @@
         </script>
         <div class="scrollToTopBtn">
             <input type = "button" name = "position_up_button" value = "TOP" id="scrollToTopBtn">
-            <script>
-                document.addEventListener('DOMContentLoaded', function() {
-                    const scrollToTopBtn = document.getElementById('scrollToTopBtn');
-    
-                    window.addEventListener('scroll', function() {
-                        if (window.scrollY > 200) {
-                            scrollToTopBtn.style.display = 'block';
-                        } else {
-                            scrollToTopBtn.style.display = 'none';
-                        }
-                    });
-                    scrollToTopBtn.addEventListener('click', function() {
-                        window.scrollTo({
-                            top: 0,
-                            behavior: 'smooth'
-                        });
-                    });
-                });
-            </script>
         </div>
     </div>
 
@@ -93,6 +71,7 @@
             <div class="container_Name">
                 <h1 id = "highlight_Top" class = "highlight">맛집</h1>
             </div>
+            <div><h3>자취하는 청년을 위한 주변 맛집들</h3></div>
             <div>
                 <div class="card">
                     <img src="jungdam.jpg" width = "300" height = "300" alt="맛집1">
@@ -222,7 +201,6 @@
                 function hide3(){
                     document.getElementById("img2").src="";      
                 }
-
             </script>
             <div class="container">
                 <div class="box" onmouseover = "show1()" onclick = "show1()" onmouseout="hide1()">
@@ -254,22 +232,23 @@
                     </div>
                 </div>
              </div>
+        </div>
         <input type="button" value= "더 보 기"><br>
-    </div>
 
         <div id = "bottom">
             <div class="container_Name">
                 <h1 id = "highlight_Bottom" class = "highlight">청소 꿀팁</h1>
                 </div>
                 <div><h3>자취 필수 정보, 청소꿀팁</h3></div>
-            </div>
             <div class="video-container">
             <iframe width="560" height="315" src="https://www.youtube.com/embed/34agNbk5ylo?si=BF8ZSOLQgwN0G7GM" 
             title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
             referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
         </div>
     </div>
     <div class = "footer">
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
