@@ -83,6 +83,9 @@ body{
   padding-left : 10px;
   padding-right : 10px;
 }
+@media screen and (max-width : 767px){
+  li {display:none;}
+}
 .header_Nav, .header_Nav:after, .header_Nav:after{
   -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
