@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -92,20 +93,6 @@
             <div class="container_Name">
                 <h1 id = "highlight_Top" class = "highlight">맛집</h1>
             </div>
-            <script>
-                document.addEventListener('DOMContentLoaded', function() {
-                const highlight = document.getElementById('highlight_Top');
-                const rect = highlight.getBoundingClientRect();
-
-                window.addEventListener('scroll', function() {
-                    if (window.scrollY > rect.top) {
-                        highlight.style.borderColor = '#090909';
-                    } else {
-                        highlight.style.borderColor = '#e8e8e8';
-                    }
-                });
-            });
-            </script>
             <div>
                 <div class="card">
                     <img src="jungdam.jpg" width = "300" height = "300" alt="맛집1">
@@ -214,20 +201,6 @@
             <div class="container_Name">
                 <h1 id = "highlight_Middle" class = "highlight">정책</h1>
             </div>
-            <script>
-                document.addEventListener('DOMContentLoaded', function() {
-                const highlight = document.getElementById('highlight_Middle');
-                const rect = highlight.getBoundingClientRect();
-
-                window.addEventListener('scroll', function() {
-                    if (window.scrollY > rect.top) {
-                        highlight.style.borderColor = '#090909';
-                    } else {
-                        highlight.style.borderColor = '#e8e8e8';
-                    }
-                });
-            });
-            </script>
             <div><h3>자취하는 청년을 위한 주거지원 정책들</h3></div>
             <script>
                 function show1(){
@@ -253,22 +226,32 @@
             </script>
             <div class="container">
                 <div class="box" onmouseover = "show1()" onclick = "show1()" onmouseout="hide1()">
-                    <h2>청년월세 특별지원</h2><br>
-                    <div><img id = "img"src=""></div>
-                    <h4>청년층 주거비 부담을 낮추고자 국토 교통부에서 월 최대 20만원씩 12개월분 월세를 지원하는 '청년월세 특별지원'을 실시</h4>
-                    <a href="https://www.bokjiro.go.kr">링크 바로가기</a>
+                    <i class="fa-quote-left"></i><div class="text"><i class="fa-quote-right"></i>
+                        <div>
+                        <h3>청년월세 특별지원</h3>
+                        <p>청년층 주거비 부담을 낮추고자 국토 교통부에서 월 최대 20만원씩 12개월분 월세를 지원하는 '청년월세 특별지원'을 실시</p>
+                        <!-- <div><img id = "img"src=""></div> -->
+                        <a href="https://www.bokjiro.go.kr">링크 바로가기</a>
+                        </div>
+                    </div>
                 </div>
                 <div class="box" onmouseover = "show2()" onclick = "show2()" onmouseout="hide2()">
-                    <h2>청년 주거급여 분리지급</h2><br>
-                    <div><img id = "img1"src=""></div>
-                    <h4>부모로부터 독립한 20대 저소득 청년에게 지역, 가구원수별 주거급여 차등 지원하는 정책을 실시</h4><br>
-                    <a href="https://www.bokjiro.go.kr">링크 바로가기</a>
+                    <i class="fas fa-quote-left fa2"></i><div class="text"><i class="fas fa-quote-right fa1"></i><div>
+                        <h3>청년 주거급여 분리지급</h3>
+                        <p>부모로부터 독립한 20대 저소득 청년에게 지역, 가구원수별 주거급여 차등 지원하는 정책을 실시</p>
+                        <!-- <div><img id = "img1"src=""></div> -->
+                        <a href="https://www.bokjiro.go.kr">링크 바로가기</a>
+                    </div>
+                    </div>
                 </div>
                  <div class="box" onmouseover = "show3()" onclick = "show3()" onmouseout="hide3()">
-                    <h2>행복 주택</h2><br>
-                    <div><img id = "img2"src=""></div>
-                    <h4>젊은 계층의 주거안정을 위해 국가 재정과 국민주택기금을 지원받아 시중 시세보다 저렴하게 공급하는 공공임대주택</h4><Br>
-                    <a href="https://apply.lh.or.kr/lhapply/cm/cntnts/cntntsView.do?mi=1201663&cntntsId=1201391">링크 바로가기</a>
+                    <i class="fas fa-quote-left fa2"></i><div class="text"><i class="fas fa-quote-right fa1"></i><div>
+                        <h3>행복주택</h3>
+                        <p>젊은 계층의 주거안정을 위해 국가 재정과 국민주택기금을 지원받아 시중 시세보다 저렴하게 공급하는 공공임대주택</p>
+                        <!-- <div><img id = "img2"src=""></div> -->
+                        <a href="https://apply.lh.or.kr/lhapply/cm/cntnts/cntntsView.do?mi=1201663&cntntsId=1201391">링크 바로가기</a>
+                    </div>
+                    </div>
                 </div>
              </div>
         <input type="button" value= "더 보 기"><br>
@@ -276,28 +259,14 @@
 
         <div id = "bottom">
             <div class="container_Name">
-            <h1 id = "highlight_bottom" class = "highlight">청소 꿀팁</h1>
+                <h1 id = "highlight_Bottom" class = "highlight">청소 꿀팁</h1>
+                </div>
+                <div><h3>자취 필수 정보, 청소꿀팁</h3></div>
             </div>
-            <script>
-                document.addEventListener('DOMContentLoaded', function() {
-                const highlight = document.getElementById('highlight_Middle');
-                const rect = highlight.getBoundingClientRect();
-
-                window.addEventListener('scroll', function() {
-                    if (window.scrollY > rect.top) {
-                        highlight.style.borderColor = '#090909';
-                    } else {
-                        highlight.style.borderColor = '#e8e8e8';
-                    }
-                });
-            });
-            </script>
-            <div><h3>자취 필수 정보, 청소꿀팁</h3></div>
-        </div>
-        <div class="video-container">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/34agNbk5ylo?si=BF8ZSOLQgwN0G7GM" 
-        title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <div class="video-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/34agNbk5ylo?si=BF8ZSOLQgwN0G7GM" 
+            title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
     </div>
     <div class = "footer">
