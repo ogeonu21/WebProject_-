@@ -378,6 +378,23 @@ a:hover, a:focus, a:active {
   }
 }
 
+.hidden-cards .card {
+  display: none;
+}
+
+.hidden-cards.show .card {
+  display: inline-block;
+}
+
+@media (max-width: 760px) {
+  .card_box .card:nth-child(n+3) {
+      display: none;
+  }
+
+  .card_box.show .card {
+      display: inline-block;
+  }
+}
 
 /* id middle */
 #middle {
@@ -477,6 +494,29 @@ a:hover, a:focus, a:active {
     transform: rotateY(20deg) skewY(-3deg);
 }
 
+.hidden-box .box {
+  display: none;
+}
+.hidden-box.show .box {
+  display: inline-block;
+}
+@media (max-width: 760px) {
+  .container .box:nth-child(n+2) {
+      display: none;
+  }
+
+  .container.show .box {
+      display: inline-block;
+  }
+}
+@media (max-width: 760px){
+  #middle .box h3 {
+    font-size: 19.5px;
+  }
+  #middle h3 {
+    font-size: 15.5px;
+  }
+}
 
 /* id bottom */
 #bottom{
@@ -497,7 +537,38 @@ a:hover, a:focus, a:active {
   margin-top: 20px;
 }
 /* button */
-.btn {
+.btn1 {
+  box-sizing: border-box;
+  appearance: none;
+  background-color: transparent;
+  border: 2px solid #414b55;
+  border-radius: 0.6em;
+  color: #414b55;
+  cursor: pointer;
+  display: flex;
+  align-self: center;
+  font-size: 0.8rem;
+  font-weight: 400;
+  line-height: 1;
+  margin: 10px;
+  padding: 0.8em 1.4em;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+  float : right;
+}
+.btn1:hover,
+.btn1:focus {
+  box-shadow: 0 0 40px 40px #414b55 inset;
+  color: #fff;
+  outline: 0;
+}
+
+
+.btn2 {
   box-sizing: border-box;
   appearance: none;
   background-color: transparent;
@@ -521,9 +592,44 @@ a:hover, a:focus, a:active {
   float : right;
 }
 
-.btn:hover,
-.btn:focus {
+.btn2:hover,
+.btn2:focus {
   box-shadow: 0 0 40px 40px #414b55 inset;
   color: #fff;
   outline: 0;
-} 
+}
+@media screen and (max-width: 760px){
+  .btn1,
+  .btn2{
+      box-sizing: border-box;
+      appearance: none;
+      background-color: transparent;
+      border: 2px solid #414b55;
+      border-radius: 0.6em;
+      color: #414b55;
+      cursor: pointer;
+      display: flex;
+      align-self: center;
+      font-size: 0.8rem;
+      font-weight: 400;
+      line-height: 1;
+      margin: 10px auto; 
+      padding: 0.8em 1.4em;
+      text-decoration: none;
+      text-align: center; 
+      text-transform: uppercase;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+      float: none;
+  }
+
+  .btn1:hover,
+  .btn1:focus,
+  .btn2:hover,
+  .btn2:focus {
+    box-shadow: 0 0 40px 40px #414b55 inset;
+    color: #fff;
+    outline: 0;
+  }
+}
