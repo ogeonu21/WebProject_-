@@ -1,3 +1,4 @@
+//좋아요 기능
 document.addEventListener('DOMContentLoaded', () => {
     const likeButtons = document.querySelectorAll('.bubbly-button');
     const initializeCounts = () => {
@@ -22,57 +23,43 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     initializeCounts();
 });
-document.addEventListener('DOMContentLoaded', () => {
-    const target = document.getElementById('highlight_Top');
+//스크롤 버튼
+document.addEventListener('DOMContentLoaded', function() {
+    const scrollToTopBtn = document.getElementById('scrollToTopBtn');
 
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('animate');
-            }
-            else{
-                entry.target.classList.remove('animate');
-            }
-        });
-    }, {
-        threshold: 0.5
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 200) {
+            scrollToTopBtn.style.display = 'block';
+        } else {
+            scrollToTopBtn.style.display = 'none';
+        }
     });
-
-    observer.observe(target);
+    scrollToTopBtn.addEventListener('click', function() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
 });
+//게시판 제목 애니메이션
 document.addEventListener('DOMContentLoaded', () => {
-    const target = document.getElementById('highlight_Middle');
+    const targets = [
+        document.getElementById('highlight_Top'),
+        document.getElementById('highlight_Middle'),
+        document.getElementById('highlight_Bottom')
+    ];
 
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('animate');
-            }
-            else{
+            } else {
                 entry.target.classList.remove('animate');
             }
         });
     }, {
         threshold: 0.5
     });
-    document.addEventListener('DOMContentLoaded', () => {
-        const target = document.getElementById('highlight_Bottom');
-    
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('animate');
-                }
-                else{
-                    entry.target.classList.remove('animate');
-                }
-            });
-        }, {
-            threshold: 0.5
-        });
-    
-        observer.observe(target);
-    });
 
-    observer.observe(target);
+    targets.forEach(target => observer.observe(target));
 });
