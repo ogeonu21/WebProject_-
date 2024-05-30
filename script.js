@@ -102,3 +102,33 @@ $(function() {
         }
     });
 });
+//이미지 보여주고 숨기기
+function showImage(imageSrc) {
+    var imgContainer = document.createElement("div");
+    imgContainer.className = "image-container";
+    
+    var closeButton = document.createElement("span");
+    closeButton.innerHTML = "&times;";
+    closeButton.className = "close-button";
+    closeButton.onclick = function() {
+        document.body.removeChild(imgContainer);
+    };
+    
+    var image = document.createElement("img");
+    image.src = imageSrc;
+    
+    imgContainer.appendChild(closeButton);
+    imgContainer.appendChild(image);
+    
+    document.body.appendChild(imgContainer);
+}
+document.addEventListener('DOMContentLoaded', () => {
+    const headings = document.querySelectorAll('#middle .container .box h3');
+    const imageSrcs = ["iimg_1.jpg", "iimg_2.jpg", "iimg_3.jpg"]; // 이미지 경로 배열
+    
+    headings.forEach((heading, index) => {
+        heading.addEventListener('click', () => {
+            showImage(imageSrcs[index]);
+        });
+    });
+});
