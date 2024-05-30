@@ -89,3 +89,16 @@ $(function() {
         $(this).text(buttonText === "더 보 기" ? "접 기" : "더 보 기");
     });
   });
+  //모바일 크기일 때 로고 움직임
+  document.addEventListener('DOMContentLoaded', function() {
+    var headerLogo = document.querySelector('.header_Logo h1');
+    headerLogo.addEventListener('click', function() {
+        if (window.innerWidth <= 767) {
+            this.classList.add('clicked');
+            var element = this;
+            setTimeout(function() {
+                element.classList.remove('clicked');
+            }, 0); 
+        }
+    });
+});
