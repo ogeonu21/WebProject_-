@@ -123,7 +123,7 @@ function showImage(imageSrc) {
     document.body.appendChild(imgContainer);
 }
 document.addEventListener('DOMContentLoaded', () => {
-    const headings = document.querySelectorAll('#middle .container .box h3');
+    const headings = document.querySelectorAll('#middle .container .box');
     const imageSrcs = ["iimg_1.jpg", "iimg_2.jpg", "iimg_3.jpg"]; // 이미지 경로 배열
     
     headings.forEach((heading, index) => {
