@@ -616,14 +616,29 @@ a:hover, a:focus, a:active {
 #bottom h3 {
   text-align: center;
 }
-.video-container {
+.video_container {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 20px;
 }
+.hidden-video .video_container {
+  display: none;
+}
+.hidden-video.show .video_container {
+  display: inline-block;
+}
+@media (max-width: 760px) {
+  .video_section .video_container:nth-child(n + 2) {
+      display: none;
+  }
+  .video_section.show .video_container {
+      display: flex;
+  }
+}
+
 /* button */
-.btn1 {
+.btn1, .btn2, .btn3 {
   box-sizing: border-box;
   appearance: none;
   background-color: transparent;
@@ -647,46 +662,20 @@ a:hover, a:focus, a:active {
   float : right;
 }
 .btn1:hover,
-.btn1:focus {
-  box-shadow: 0 0 40px 40px #414b55 inset;
-  color: #fff;
-  outline: 0;
-}
-
-
-.btn2 {
-  box-sizing: border-box;
-  appearance: none;
-  background-color: transparent;
-  border: 2px solid #414b55;
-  border-radius: 0.6em;
-  color: #414b55;
-  cursor: pointer;
-  display: flex;
-  align-self: center;
-  font-size: 0.8rem;
-  font-weight: 400;
-  line-height: 1;
-  margin: 10px;
-  padding: 0.8em 1.4em;
-  text-decoration: none;
-  text-align: center;
-  text-transform: uppercase;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-  transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
-  float : right;
-}
-
+.btn1:focus,
 .btn2:hover,
-.btn2:focus {
+.btn2:focus,
+.btn3:hover,
+.btn3:focus{
   box-shadow: 0 0 40px 40px #414b55 inset;
   color: #fff;
   outline: 0;
 }
+
 @media screen and (max-width: 760px){
   .btn1,
-  .btn2{
+  .btn2,
+  .btn3{
       box-sizing: border-box;
       appearance: none;
       background-color: transparent;
@@ -712,7 +701,9 @@ a:hover, a:focus, a:active {
   .btn1:hover,
   .btn1:focus,
   .btn2:hover,
-  .btn2:focus {
+  .btn2:focus,
+  .btn3:hover,
+  .btn3:focus {
     box-shadow: 0 0 40px 40px #414b55 inset;
     color: #fff;
     outline: 0;
@@ -790,6 +781,7 @@ a:hover, a:focus, a:active {
     color: white;
     position: relative; 
     text-align: left; 
+    margin-top: 50px;
 }
   .container_footer .img{
     position: absolute; 
