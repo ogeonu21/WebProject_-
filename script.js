@@ -89,6 +89,19 @@ $(function() {
         $(this).text(buttonText === "더 보 기" ? "접 기" : "더 보 기");
     });
   });
+//숨겨진 영상
+$(function() {
+    $('.btn3').click(function() {
+        var video_section = $('.video_section');
+        var hiddenVideo = video_section.find('.video_container:nth-child(n+2):lt(3)');
+        hiddenVideo.each(function(index, video_container) {
+            $(video_container).toggleClass('show');
+        });
+        video_section.toggleClass('show');
+        var buttonText = $(this).text();
+        $(this).text(buttonText === "더 보 기" ? "접 기" : "더 보 기");
+    });
+  });
   //모바일 크기일 때 로고 움직임
   document.addEventListener('DOMContentLoaded', function() {
     var headerLogo = document.querySelector('.header_Logo h1');
